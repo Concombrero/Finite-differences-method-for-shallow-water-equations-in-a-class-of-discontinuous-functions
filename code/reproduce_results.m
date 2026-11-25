@@ -16,13 +16,13 @@ function reproduce_results(T_max)
 
     [u, h, q, v] = shallowWater(dx, l, tau, T_max, u0, h0, q0, v0, H, g);
 
-    subplot(2, 1, 1);
+    subplot(1, 2, 1);
     plot(x, u(:, end));
     xlabel('x');
     ylabel('u');
     title(sprintf('u at t = %.2f', T_max));
 
-    subplot(2, 1, 2);
+    subplot(1, 2, 2);
     plot(x, h(:, end) + H);
     hold on;
     plot(x, H, 'r--');
